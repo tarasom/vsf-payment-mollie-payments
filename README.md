@@ -6,12 +6,12 @@ Mollie Payments API integration for Vue Storefront with Magento 2 as backend sys
 Image shown above is the order status page after the customer successfullly paid for an order.
 
 # Purpose
-We created this module to make it possible to pay placed orders in Vue Storefront checkout.
-With Magento 2 as a backend system it's now possible to offer your customers all common payment methods within the Vue Storefront checkout when online and give accurate payment status information immediately afterwards.
+We created this module to make it possible to pay placed orders in Vue Storefront checkout.\
+With Magento 2 as a backend system it's now possible to offer your customers all common payment methods within the Vue Storefront checkout when online and give accurate payment status information immediately afterwards.\
 Are you missing features you need, please feel free to contact us via https://www.getnoticed.nl/ or create an issue in this Github repository,
 
 # Installation Guide
-Follow these steps to install this module in Vue Storefront.
+Follow these steps to install this module in Vue Storefront.\
 We tried to be so specific as possible, if you need help don't hesitate to contact us. Please find below the options to get support.
 
 First, make sure you meet these requirements for your Magento 2 installation.
@@ -21,7 +21,9 @@ First, make sure you meet these requirements for your Magento 2 installation.
 1. Install Get Noticed Magento 2 Order extension attributes module: 
 
 ```shell
-composer require TBA
+composer require getnoticed/module-vsf-mollie
+php bin/magento module:enable GetNoticed_VsfMollie
+php bin/magento setup:upgrade
 ```
 
 # Requirements for Vue Storefront API
