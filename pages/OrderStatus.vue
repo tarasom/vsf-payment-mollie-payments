@@ -193,14 +193,6 @@ export default {
     setError (message) {
       this.$bus.$emit('notification-progress-stop')
       Logger.error(message, 'Mollie')()
-      // this.$store.dispatch('notification/spawnNotification', {
-      //   type: 'error',
-      //   message: i18n.t(message),
-      //   action1: { label: i18n.t('OK') },
-      //   hasNoTimeout: true
-      // })
-      // this.$store.dispatch('checkout/setThankYouPage', false)
-      // router.push(localizedRoute('/', this.$store.state.config.mollie.invalid_payment_status_check_url))
     }
   },
   components: {
