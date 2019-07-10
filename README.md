@@ -38,7 +38,7 @@ After making sure to meet the above mentioned requirements, please follow the ne
 Clone this git repository from within your vue-storefront root folder
 
 ```shell
-git clone git@github.com/GetNoticedNL/vsf-payment-mollie-payments.git src/modules/vsf-payment-getnoticed-mollie
+git clone git@github.com:GetNoticedNL/vsf-payment-mollie-payments.git src/modules/vsf-payment-getnoticed-mollie
 ```
 
 Add the config properties in `config/local.json`
