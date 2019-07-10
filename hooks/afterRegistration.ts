@@ -1,5 +1,5 @@
 import MolliePaymentReview from '../components/PaymentReview.vue'
-import store from '@vue-storefront/store'
+import store from '@vue-storefront/core/store'
 import i18n from '@vue-storefront/i18n'
 import { localizedRoute} from '@vue-storefront/core/lib/multistore'
 import { router } from '@vue-storefront/core/app'
