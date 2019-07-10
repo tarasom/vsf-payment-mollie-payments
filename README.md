@@ -41,6 +41,25 @@ Clone this git repository from within your vue-storefront root folder
 git clone git@github.com:GetNoticedNL/vsf-payment-mollie-payments.git src/modules/vsf-payment-getnoticed-mollie
 ```
 
+# Module registration
+Open `src/modules/index.ts`
+
+Add:
+
+```js
+...
+import { Mollie } from './vsf-payment-getnoticed-mollie'
+```
+
+And make sure to also add the module to the registered modules array
+
+```js
+...
+Mollie
+```
+
+# Add configuration settings
+
 Add the config properties in `config/local.json`
 
 ```
@@ -52,6 +71,17 @@ Add the config properties in `config/local.json`
 ```
 
 Make sure to set the correct location to your API and the routes to the CMS pages in case of an error or an invalid payment status check.
+
+# Integration to theme
+We included a folder `theme-integration` to help you to seemlessly add all the customizations.
+We used the default theme, below we'll sum up the changes that are necessary to completely integrate this module to your own theme if you're not using Vue Storefront default theme.
+
+* Add a method to the currentPage mixin to hide header and footer when communication with Mollie API is processing - add condition to show header and footer in components depending on this method
+* Remove default ThankYouPage as you go immediately to Mollie gateway to pay for the placed order
+* Add customizations to Payment component to only show payment methods configured in Mollie account
+* Add customizations to Payment component to let customers who can pay with iDeal to choose for their bank.
+
+![order-review](https://user-images.githubusercontent.com/26965893/60960038-9026b600-a309-11e9-9f94-0290c63e7c7c.png)
 
 # Manage payment methods
 To enable payment methods in your Vue Storefront checkout you have to follow these steps:
@@ -73,34 +103,6 @@ To enable payment methods in your Vue Storefront checkout you have to follow the
 ```
 
 ![paymentmethods-listing](https://user-images.githubusercontent.com/26965893/60957691-5a7fce00-a305-11e9-8947-35bdeb736123.png)
-
-# Module registration
-Open `src/modules/index.ts`
-
-Add:
-
-```js
-...
-import { Mollie } from './vsf-payment-getnoticed-mollie'
-```
-
-And make sure to also add the module to the registered modules array
-
-```js
-...
-Mollie
-```
-
-# Integration to theme
-We included a folder `theme-integration` to help you to seemlessly add all the customizations.
-We used the default theme, below we'll sum up the changes that are necessary to completely integrate this module to your own theme if you're not using Vue Storefront default theme.
-
-* Add a method to the currentPage mixin to hide header and footer when communication with Mollie API is processing - add condition to show header and footer in components depending on this method
-* Remove default ThankYouPage as you go immediately to Mollie gateway to pay for the placed order
-* Add customizations to Payment component to only show payment methods configured in Mollie account
-* Add customizations to Payment component to let customers who can pay with iDeal to choose for their bank.
-
-![order-review](https://user-images.githubusercontent.com/26965893/60960038-9026b600-a309-11e9-9f94-0290c63e7c7c.png)
 
 # Important notes
 It's not yet possible to pay for orders that are placed when the user is offline. This feature gets added in a later stadium.
