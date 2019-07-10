@@ -11,7 +11,7 @@ With Magento 2 as a backend system it's now possible to offer your customers all
 Are you missing features you need, please feel free to contact us via https://www.getnoticed.nl/ or create an issue in this Github repository,
 
 # Sign up for a Mollie account
-If you haven't done that already, head out to https://www.mollie.com/ for signing up for an account.
+If you haven't done that already, head out to https://www.mollie.com/ to sign up for an account.
 
 # Installation Guide
 Follow these steps to install this module in Vue Storefront.\
