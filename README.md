@@ -77,7 +77,7 @@ We included a folder `theme-integration` to help you to seemlessly add all the c
 We used the default theme, below we'll sum up the changes that are necessary to completely integrate this module to your own theme if you're not using Vue Storefront default theme.
 
 * Add a method to the currentPage mixin to hide header and footer when communication with Mollie API is processing - add condition to show header and footer in components depending on this method
-* Remove default ThankYouPage as you go immediately to Mollie gateway to pay for the placed order
+* Remove default ThankYouPage as the customer goes immediately to the Mollie payment gateway to pay for the placed order. The customer comes back to a customized order status page.
 * Add customizations to Payment component to only show payment methods configured in Mollie account
 * Add customizations to Payment component to let customers who can pay with iDeal to choose for their bank.
 
