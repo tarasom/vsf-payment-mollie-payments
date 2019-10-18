@@ -1,7 +1,7 @@
 import MolliePaymentReview from '../components/PaymentReview.vue'
 import store from '@vue-storefront/core/store'
 import i18n from '@vue-storefront/i18n'
-import { localizedRoute} from '@vue-storefront/core/lib/multistore'
+import { localizedRoute } from '@vue-storefront/core/lib/multistore'
 import { router } from '@vue-storefront/core/app'
 import { Logger } from '@vue-storefront/core/lib/logger'
 
@@ -34,7 +34,7 @@ export function afterRegistration ({ Vue, config }) {
       if(resp.code !== 200){
         throw new Error("Could not fetch backend order details")
       }
-      const cartTotal = store.getters['cart/totals'].find(seg => seg.code === 'grand_total').value.toFixed(2);
+      const cartTotal = store.getters['cart/getTotals'].find(seg => seg.code === 'grand_total').value.toFixed(2);
       const hashData = {
         hash: resp.result.hash,
         cart_total: cartTotal,

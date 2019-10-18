@@ -102,7 +102,7 @@ export const actions: ActionTree<MollieState, any> = {
 
   createPayment ({ rootState, rootGetters }, payload ) {
     let fetchUrl = rootState.config.mollie.endpoint + '/post-payment'
-    let total = rootGetters['cart/totals'].find(seg => seg.code === 'grand_total').value.toFixed(2)
+    let total = rootGetters['cart/getTotals'].find(seg => seg.code === 'grand_total').value.toFixed(2)
 
     let params = {
       amount: {
